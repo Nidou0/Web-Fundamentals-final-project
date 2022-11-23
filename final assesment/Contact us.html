@@ -1,0 +1,79 @@
+<html lang="en">
+    <head>
+        <script>
+            function Validation() {
+                var name = document.myForm.name.value;
+                var email = document.myForm.email.value;
+                var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+
+
+
+                if(name == ("")  || email == ("")){
+                    alert("One or more fields are left blank, please check again");
+                    return false;
+                }
+                else if(email.match(pattern)){
+                    
+                    return true;
+                }
+                else {
+                    alert("Invalid email, please check again");
+                    return false;
+                }
+                }
+            
+            
+        </script>
+        <link rel="stylesheet" href="CSS1.css">
+        <title>Climate Change</title>
+        <meta charset="utf-8">
+    </head>
+    <header>
+        <nav class="navigation-bar">
+            <b><a href= "index.html">Home&nbsp;</a> </td>   
+            <a href= "how to help.html">How to help&nbsp;</a></td>       
+            <a href="Contact us.html">Contact us</a></b></td>  
+        </nav>
+          <br>
+          <br>
+    </header>
+    <body>
+    
+        <h1  id="top">Before it's too late </h1>
+       
+        <main>
+            <h2> About me</h2>
+            <img src="passport photo.jpg" class="aboutme" ALIGN="left" >
+            <p>My name is Nidal Bencheikh Iam a first year student at Sunway University pursuing a degree in Computer Networking and Security, I had recently taken an intrest in climate change and global warming after watching documentries 
+                that show the devestating effect of climate change and thats why i created this webpage to raise awareness for the issue.
+                </p>
+                <p> Thank you for your attention i hope you i was able to help you understand the issue of climate change and open your eyes to whats happening. 
+                    If you would like to help out to spread the message you can fill the form below and i will reach out to you.
+                </p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div>
+        <form name ="myForm" method="get" id="form"  action="submissionpage.html" onsubmit="return Validation()"> 
+        <input type="text" name="fname"  id="name" placeholder="Name">
+        <br><br>
+        <input type="text" name="email" id="email" placeholder="Email">
+        <span id="text"></span>
+        <br><br>
+        <textarea rows="4" cols="50" id="message" placeholder="Message"></textarea><br><br>
+        <input type="submit" value="Send your message" >
+        </form> 
+    </div>
+
+    </main>
+    <footer>
+        <small><i>Copyright &copy; 2022 Sunway University</i></small>
+    </footer>
+</body>
+</html>
